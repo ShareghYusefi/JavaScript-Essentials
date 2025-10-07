@@ -80,3 +80,35 @@ console.log("+= :", (t += p)); // t = t + p => 20
 console.log("-= :", (p -= t)); // p = p - t => -9
 console.log("*= :", (r *= g)); // r = r * g => 15
 console.log("/= :", (r /= g)); // r = r / g => 3
+
+// Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
+// Comparison operators are used to compare two values and return a boolean result (true or false)
+
+// !: not operator
+// !=: not equal to, typically used to flip result of a camparison
+// ==: equals in only value and not data type
+// ===: strict equal in value and data type
+
+var num1 = 10; // number type
+var num2 = "10"; // string type
+var num3 = 20;
+console.log("Equal to: ", num1 == num2); // true since value is equal.
+console.log("Strict Equal to: ", num1 === num2); // false since value is equal, but data type is not.
+console.log("Not Equal to: ", num1 != num2); // false, value is equal
+console.log("Strict Not Equal to: ", num1 !== num2); // true since value is equal, but data type is not.
+console.log("Greater than: ", num1 > num2); // false
+console.log("Less than: ", num1 < num2); // false
+console.log("Greater than or equal to: ", num1 >= num2); // true
+console.log("Greater than or equal to: ", num1 <= num2); // true
+
+// Logical Operators: &&, ||, !
+// &&: AND operator
+// ||: OR operator
+// !: Negation operator
+
+console.log("&&: ", num1 == num2 && num1 === num2); // false since one of the conditions returns false
+
+// When using || operator, if first condition is true, the second condition is not checked
+console.log("||: ", num3 > num1 || num3 < num2); // true since first condition is true
+
+console.log("&&: ", num1 == num2 && !(num1 === num2)); // true
