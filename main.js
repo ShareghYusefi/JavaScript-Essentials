@@ -112,3 +112,27 @@ console.log("&&: ", num1 == num2 && num1 === num2); // false since one of the co
 console.log("||: ", num3 > num1 || num3 < num2); // true since first condition is true
 
 console.log("&&: ", num1 == num2 && !(num1 === num2)); // true
+
+// Function: block of code that performs a specific task
+// Parameters: A placeholder inside a function definition. It acts as a variable for the value that is passed through when the function is called.
+// return keyword can be used to exit and return a value from the function
+
+// Function definition
+// The function expects two values to be passed to it and assigns them to parameters a and b
+function sum(a, b) {
+  var result = a + b;
+
+  return result; // will be spit out of the function once called
+}
+
+// We store the returned value from a function call in a variable
+// The function is called using curly brackets and values
+// Arguments: The actual value or variable that contains a value to be passed into the function.
+var total1 = sum(20, 15);
+console.log(total1);
+
+var total2 = sum(total1, 9);
+console.log(total2);
+
+var finalValue = sum(total1, total2);
+console.log(finalValue);
