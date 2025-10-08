@@ -169,3 +169,73 @@ console.log("charAt of 3: ", firstname.charAt(3)); // n
 
 // 4. toUpperCase - converts a string to uppercase
 console.log("Uppercase: ", firstname.toUpperCase());
+
+// Arrays: zero indexed lists of items
+// Creating an Array
+var cars = ["BMW", "Audi", "Mercedes"];
+console.log(cars);
+
+// Array function
+var numbers = Array(1, 3, 6, 9);
+console.log(numbers);
+
+// Accessing Array Elements is done via arrayVariable[indexValue]
+console.log("First Element in cars: ", cars[0]);
+
+// Assigning a new value to an element
+cars[0] = "Toyota";
+console.log("Updated cars: ", cars);
+
+// Array Methods(functions) & properties (variables)
+// 1. length - returns the length of array
+console.log("Length of Cars Array: ", cars.length);
+
+// 2. push: add an element to the end of an array
+cars.push("Tesla");
+console.log("Push Tesla to cars: ", cars);
+
+// 3. unshift adds an element to the begining of an array
+cars.unshift("Honda");
+console.log("Unshfit Honda to cars: ", cars);
+
+// 4. pop removes the last element from an array
+cars.pop();
+console.log("Pop Tesla from cars: ", cars);
+
+// 5. shift removes the first element from an array
+cars.shift();
+console.log("Shift Honda from cars: ", cars);
+
+// 6. sort sort elements in alphabetical or numeric order
+cars.sort();
+console.log("Sorted cars: ", cars);
+
+// 7. reverse: will reverse the order of elements
+cars.reverse();
+console.log("Reversed cars: ", cars);
+
+// 8. slice: return a copied portion of an array
+var newCars = cars.slice(0, 2); // index 0 to 2 non-inclusive of 2
+console.log("New Cars: ", newCars);
+
+// 9a. splice: can be used to remove elements from an array at any position
+cars.splice(1, 1);
+console.log("Splice Remove: ", cars);
+
+// 9b. splice: can be used to add elements to an array
+cars.splice(1, 0, "Ford", "Chevy");
+console.log("Splice Add: ", cars);
+
+// 10. map: creates a new array with results from calling a function for every item within the current array
+var squaredRootedNumbers = numbers.map(Math.sqrt);
+console.log("Squared Rooted Numbers: ", squaredRootedNumbers);
+
+// / 2D Arrays: arrays within arrays
+var matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+
+console.log("Matrix: ", matrix);
+// Accessing first element of first array
+console.log("Element 1: ", matrix[0][0]);
