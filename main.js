@@ -36,6 +36,7 @@ var person = {
   isAdult: true,
 };
 console.log(person);
+console.log("Person age: ", person.age);
 
 // Array Objects are defined using [] - zero indexed list of items
 var languages = ["Javascript", "Python", "Java"];
@@ -122,6 +123,8 @@ console.log("&&: ", num1 == num2 && !(num1 === num2)); // true
 function sum(a, b) {
   var result = a + b;
 
+  console.log(result);
+
   return result; // will be spit out of the function once called
 }
 
@@ -136,3 +139,33 @@ console.log(total2);
 
 var finalValue = sum(total1, total2);
 console.log(finalValue);
+
+// String Manipulation
+var firstname = "John";
+var lastname = "Doe";
+
+// string concatenation - joining two or more strings
+var fullname = firstname + " " + lastname;
+console.log("Full Name: ", fullname);
+
+// using .concat method/function accessed after period with Ctrl + spacebar
+var fullname2 = firstname.concat(" ", lastname);
+console.log("Full Name2: ", fullname2);
+
+// using batckticks (template literals)
+var fullname3 = `${firstname} ${lastname}`;
+console.log("Full Name3: ", fullname3);
+
+// String Methods(functions) & properties(variables)
+// 1.length property: returns the character count/length of the string
+console.log("Firstname length: ", firstname.length);
+
+// like arrays, strings are zero indexed
+// 2. indexOf - return the index of a character in a string
+console.log("Index of n: ", firstname.indexOf("n")); // 3
+
+// 3. charAt - returns the index of a character in a string
+console.log("charAt of 3: ", firstname.charAt(3)); // n
+
+// 4. toUpperCase - converts a string to uppercase
+console.log("Uppercase: ", firstname.toUpperCase());
