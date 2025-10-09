@@ -227,7 +227,7 @@ cars.splice(1, 0, "Ford", "Chevy");
 console.log("Splice Add: ", cars);
 
 // 10. map: creates a new array with results from calling a function for every item within the current array
-var squaredRootedNumbers = numbers.map(Math.sqrt);
+var squaredRootedNumbers = numbers.map(Math.sqrt); // => [1^1/2, 3^1/2, 6^1/2, 9^1/2]
 console.log("Squared Rooted Numbers: ", squaredRootedNumbers);
 
 // / 2D Arrays: arrays within arrays
@@ -239,3 +239,36 @@ var matrix = [
 console.log("Matrix: ", matrix);
 // Accessing first element of first array
 console.log("Element 1: ", matrix[0][0]);
+
+// Conditional Statements: used to perform diffrent actions based on given conditions
+// 1. if, else if, else
+var age = 17;
+if (age >= 21) {
+  console.log("You can vote in the US");
+} else if (age >= 18) {
+  console.log("You can drive in the US");
+} else {
+  console.log("You are too young to vote or drive in the US");
+}
+
+// 2. switch statement: look for an value exact match
+var day = "Sunday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start of work week");
+    break; // exiting the switch code block
+  case "Friday":
+    console.log("End of work week");
+    break;
+  // Fall through case: when no break is used, the next case will be checked against
+  case "Saturday":
+  case "Sunday":
+    console.log("Weekend");
+    break;
+
+  default:
+    console.log("Midweek day");
+
+    break;
+}
