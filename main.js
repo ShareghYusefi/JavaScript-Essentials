@@ -272,3 +272,42 @@ switch (day) {
 
     break;
 }
+
+// Loops: used to repeat a block of code multiple times
+// 1. for loop
+var array = [3, 5, 9];
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  console.log(element);
+}
+
+// 2. while loop: used to repeat a block of code as long as a condition is true
+var j = 0;
+while (j < 3) {
+  console.log("j is: ", j);
+  j++; // increment j to avoid infinite loop issues
+}
+
+// 3. do while loop: similar to while loop, but the code block is executed at least once before checking the condition
+var k = 0;
+do {
+  console.log("k is: ", k);
+  k++; // increment k to avoid infinite loop
+} while (k < 3);
+
+// 4. for-in loop: used to iterate over the properties of an object
+for (const key in person) {
+  // if person does NOT have key
+  if (!Object.hasOwn(person, key)) {
+    // continue exits current iteration/key within the for in loop
+    continue;
+  }
+
+  //   key is the property name, person[key] is the value
+  console.log(`${key}: ${person[key]}`);
+}
+
+// 5. for-of loop: used to iterate over objects like arrays, strings, etc.
+for (const language of languages) {
+  console.log("Language: ", language); // language is the value of each element in the languages array
+}
